@@ -1,4 +1,4 @@
-app.component('Rose', {
+app.component('photo-item', {
   props: {
     roses: {
       type: Array,

@@ -1,4 +1,4 @@
-app.component('Searchbar',{
+app.component('photo-search',{
     props: {
       isshowsearchbox:{
         type: Boolean,

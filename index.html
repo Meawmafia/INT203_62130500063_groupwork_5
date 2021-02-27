@@ -11,13 +11,13 @@
   <body>
     <div id="app">
     <div v-if="!isShowImg">
-      <Count :favcount="favCount" :cal="calculate"></Count>
-      <Searchbar @show-searchbox="showSearchBox" @cancel="Cancel" @search="Search" :isshowsearchbox="isShowSearchBox" :isfound="isFound"></Searchbar>
-      <Rose @update-fav="updateFav" @handle-click="handleClickImg" :roses="roses" :fav="fav" :unfav="unfav" :isshowimg="isShowImg" ></Rose>
+      <photo-count :favcount="favCount" :cal="calculate"></photo-count>
+      <photo-search @show-searchbox="showSearchBox" @cancel="Cancel" @search="Search" :isshowsearchbox="isShowSearchBox" :isfound="isFound"></photo-search>
+      <photo-item @update-fav="updateFav" @handle-click="handleClickImg" :roses="roses" :fav="fav" :unfav="unfav" :isshowimg="isShowImg" ></photo-item>
     </div>
    
     <div class="bg-black bg-opacity-80 min-h-screen flex justify-center" v-else>
-    <Show @close="Close" :currentimg="currentImg"></Show>
+    <photo-view @close="Close" :currentimg="currentImg"></photo-view>
     </div>
 
   </div>
@@ -26,10 +26,10 @@
     <script src="./main.js"></script>
  
     <!-- Import Components -->
-    <script src="./components/Rose.js"></script>
-    <script src="./components/Count.js"></script>
-    <script src="./components/Searchbar.js"></script>
-    <script src="./components/Show.js"></script>
+    <script src="./components/PhotoItem.js"></script>
+    <script src="./components/PhotoSearch.js"></script>
+    <script src="./components/PhotoView.js"></script>
+    <script src="./components/PhotoCount.js"></script>
 
 
     

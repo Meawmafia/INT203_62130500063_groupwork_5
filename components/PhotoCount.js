@@ -1,4 +1,4 @@
-app.component('Count',{
+app.component('photo-count',{
     props:{
         favcount: {
             type: Number,

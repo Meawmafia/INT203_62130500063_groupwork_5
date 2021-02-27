@@ -1,4 +1,4 @@
-app.component('Show',{
+app.component('photo-view',{
     props: {
         isshowimg: {
             type: Boolean,

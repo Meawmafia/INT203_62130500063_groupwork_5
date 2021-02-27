@@ -45,7 +45,7 @@ const app = Vue.createApp({
                     }
                 }
                 if(this.roses.every(element => element.isHidden)) this.isFound = false;
-                keyword = '';
+                // keyword = '';
 
             
             }
@@ -56,6 +56,7 @@ const app = Vue.createApp({
                 element.isHidden = false
             }
             this.isFound = true
+            this.keyword = ""
         },
         Close(){
             this.isShowImg = false;
