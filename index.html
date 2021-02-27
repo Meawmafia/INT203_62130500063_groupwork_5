@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import tailwinds -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+    <div v-if="!isShowImg">
+      <Count :favcount="favCount" :cal="calculate"></Count>
+      <Searchbar @show-searchbox="showSearchBox" @cancel="Cancel" @search="Search" :isshowsearchbox="isShowSearchBox" :isfound="isFound"></Searchbar>
+      <Rose @update-fav="updateFav" @handle-click="handleClickImg" :roses="roses" :fav="fav" :unfav="unfav" :isshowimg="isShowImg" ></Rose>
+    </div>
+   
+    <div class="bg-black bg-opacity-80 min-h-screen flex justify-center" v-else>
+    <Show @close="Close" :currentimg="currentImg"></Show>
+    </div>
+
+  </div>
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+ 
+    <!-- Import Components -->
+    <script src="./components/Rose.js"></script>
+    <script src="./components/Count.js"></script>
+    <script src="./components/Searchbar.js"></script>
+    <script src="./components/Show.js"></script>
+
+
+    
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
